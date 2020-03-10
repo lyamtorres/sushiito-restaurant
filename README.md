@@ -1,1 +1,1 @@
-# sushiito-restaurant
+# Sushiito Restaurant
