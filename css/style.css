@@ -42,12 +42,12 @@
   }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    line-height: 2rem;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  line-height: 2rem;
+  overflow-x: hidden;
 }
 
 h1,
@@ -60,9 +60,21 @@ h6 {
   text-transform: uppercase;
 }
 
+h3 {
+  color: #FFFFFF;
+}
+
 a {
   text-decoration: none;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Header */
 
 .header {
   width: 100%;
@@ -81,15 +93,14 @@ a {
   display: flex;
 }
 
-#header-container {
+.header .container {
   height: inherit;
 }
 
-nav {
+.navbar {
   width: inherit;
   height: inherit;
   display: flex;
-  
 }
 
 .header-section {
@@ -99,40 +110,8 @@ nav {
   align-items: center;
 }
 
-.burger-button {
-  width: 3rem;
-  height: 3rem;
-  color: white;
-  font-size: 3rem;
-  line-height: 3rem;
-  text-align: center;
-  
-}
-
-.icon-menu2 {
-  display: none;
-}
-
-.menu {
-  display: none;
-}
-
 #logo-section {
   justify-content: center;
-}
-
-#reservation-section {
-  justify-content: right;
-}
-
-.reservation {
-  width: 12rem;
-  height: 3rem;
-  font-size: 1rem;
-  color: #FFFFFF;
-  border: solid #FFFFFF;
-  line-height: 3rem;
-  text-align: center;
 }
 
 .logo {
@@ -145,9 +124,29 @@ nav {
   height: inherit;
 }
 
-/* Hero section*/
+.reservation {
+  width: 12rem;
+  height: 3rem;
+  border: solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 3rem;
+  text-align: center;
+  transition: .25s ease-in-out;
+}
 
-#hero-container {
+.reservation:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+#reservation-section {
+  justify-content: right;
+}
+
+/* Showcase section*/
+
+#showcase-container {
   margin: 0;
   padding: 0;
   background-image: url(../img/hero.jpg);
@@ -169,28 +168,37 @@ nav {
 .read-more {
   width: 7.5rem;
   height: 2.5rem;
+  border: solid #000000;
   color: #000000;
   font-size: 1.5rem;
   line-height: 2.5rem;
   text-align: center;
-  border: solid #000000;
+  text-transform: uppercase;
+  transition: .25s ease-in-out;
 }
 
-.read-more {
-  text-transform: uppercase;
+.read-more:hover {
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
 .split {
-  position: absolute;
   width: 50%;
   height: inherit;
+  position: absolute;
 }
 
 .split.left {
-  left: 0;
   background-color: #EBE9E6;
   display: inherit;
   align-items: center;
+  left: 0;
+}
+
+.split.right {
+  background-size: cover;
+  background-position: center;
+  right: 0;
 }
 
 .item {
@@ -200,12 +208,6 @@ nav {
   flex-wrap: wrap;
 }
 
-.split.right {
-  right: 0;
-  background-size: cover;
-  background-position: center;
-}
-
 .restaurant-menu .split.right {
   background-image: url(../img/menu.jpg);
 }
@@ -213,20 +215,20 @@ nav {
 /* About section */
 
 .about .split.left {
-  left: 0;
   background-size: cover;
   background-position: center;
   background-image: url(../img/about.jpg);
+  left: 0;
 }
 
 .about .split.right {
-  right: 0;
   background-color: #EBE9E6;
   display: inherit;
   align-items: center;
+  right: 0;
 }
 
-/* Gallery section */
+/* Events section */
 
 .events .split.right {
   background-image: url(../img/events.jpg);
@@ -235,17 +237,17 @@ nav {
 /* Contact section */
 
 .contact .split.left {
-  left: 0;
   background-size: cover;
   background-position: center;
   background-image: url(../img/contact.jpg);
+  left: 0;
 }
 
 .contact .split.right {
-  right: 0;
   background-color: #EBE9E6;
   display: inherit;
   align-items: center;
+  right: 0;
 }
 
 /* Footer */
@@ -261,6 +263,25 @@ nav {
   align-items: center;
 }
 
-h3 {
-  color: #FFFFFF;
+/* Media queries */
+
+@media screen and (max-width: 767px) {
+  .header-section {
+    width: 50%;
+  }
+
+  #logo-section {
+    justify-content: right;
+
+  }
+  #reservation-section {
+    display: none;
+  }
+
+  /* Rehacer toda la parte del split screen de una manera más eficiente */
+     
+  .split {
+    width: auto;
+    height: 50%;
+  }
 }

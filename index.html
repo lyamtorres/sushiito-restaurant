@@ -6,26 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sushiito Restaurant</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Yanone+Kaffeesatz&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header class="header">
-        <div class="container" id="header-container">
-            <nav>
+        <div class="container">
+            <nav class="navbar">
                 <div class="header-section" id="menu-section">
-                    <a href="javascript:void(0)">
-                        <i class="burger-button icon-menu1"></i>
-                        <i class="burger-button icon-menu2"></i>
-                    </a>  
-                    <div class="menu">
-                        <ol class="menu-selection">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ol>
-                    </div>
+                    <div class="menu-wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger"><div></div></div>
+                        <div class="menu">
+                            <div>
+                                <div>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Events</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
                 <div class="header-section" id="logo-section">
                     <a href="javascript:void(0)">
@@ -44,8 +49,8 @@
             </nav>
         </div>
     </header>
-    <section class="hero">
-        <div class="container" id="hero-container">
+    <section class="showcase">
+        <div class="container" id="showcase-container">
         </div>
     </section>
     <section class="restaurant-menu">
@@ -121,6 +126,6 @@
             <h3>Sushiito Restaurant 2020. All Rights Reserved</h3>
         </div>
     </footer>
-    <script src="/js/script.js"></script>
+   <script src="/js/script.js"></script>
 </body>
 </html>
