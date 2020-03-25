@@ -137,3 +137,9 @@
 .menu-wrap .menu > div > div > ul > li > a:hover {
     color: #000000;
   }
+
+  @media screen and (max-width: 767px) {
+    .menu-wrap .menu > div {
+        width: 100vw;
+      }
+  }
