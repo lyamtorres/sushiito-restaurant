@@ -27,9 +27,19 @@ h6 {
   text-transform: capitalize;
 }
 
-a {
-  text-decoration: none;
-  text-transform: capitalize;
+ol {
+  width: var(--section-width);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inherit;
+}
+
+ol a {
+  padding-right: 1rem;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 ul {
@@ -37,6 +47,12 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
 
 /* Header */
 
@@ -92,7 +108,7 @@ nav {
 }
 
 #reservation-segment {
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .reservation {
@@ -100,20 +116,16 @@ nav {
   height: 3rem;
   border: solid var(--terciary-color);
   color: var(--terciary-color);
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 3rem;
   text-align: center;
+  text-transform: uppercase;
   transition: .25s ease-in-out;
 }
 
 .reservation:hover {
   color: var(--secondary-color);
   background-color: var(--terciary-color);
-}
-
-.reservation h1 {
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 /* Showcase section */
@@ -141,6 +153,7 @@ nav {
 
 .title {
   width: inherit;
+  margin-top: 1rem;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -154,6 +167,7 @@ nav {
 .box {
   width: var(--section-width);
   height: 2.5rem;
+  margin-bottom: 1rem;
   display: flex;
 }
 
@@ -190,7 +204,7 @@ nav {
   width: var(--section-width);
   margin: 0 auto;
   padding: 0 2rem;
-  padding-top: 5rem;
+  padding-top: 4rem;
   display: inherit;
   flex-wrap: wrap;
 }
@@ -265,8 +279,9 @@ nav {
 }
 
 .footer .container {
-  width: 298.083px;
+  width: auto;
   height: inherit;
+  justify-content: center;
   align-items: center;
 }
 
@@ -292,6 +307,10 @@ nav {
 }
 
 /* ABOUT PAGE */ 
+
+.more-info {
+  margin-right: 1rem;
+}
 
 .main-about {
   height: var(--section-height);
@@ -322,6 +341,35 @@ nav {
   background-image: url(../img/main-events.jpg);
   right: 0;
 }
+
+.birthday {
+  height: var(--section-height);
+  display: flex;
+}
+
+.split.info.birthday {
+  right: 0;
+}
+
+.split.image.birthday {
+  background-image: url(../img/birthday.jpg);
+  left: 0;
+}
+
+.pool {
+  height: var(--section-height);
+  display: flex;
+}
+
+.split.info.pool {
+  left: 0;
+}
+
+.split.image.pool {
+  background-image: url(../img/pool.jpg);
+  right: 0;
+}
+
 
 /* CONTACT PAGE */
 
@@ -393,7 +441,7 @@ textarea {
   }
 
   #logo-segment {
-    justify-content: right;
+    justify-content: flex-end;
   }
 
   #reservation-segment {
@@ -455,8 +503,24 @@ textarea {
     top: 50vh;
   }
 
+  .split.image.birthday {
+    top: 100vh;
+  }
+
+  .split.info.birthday {
+    top: 150vh;
+  }
+
+  .split.image.pool {
+    top: 200vh;
+  }
+
+  .split.info.pool {
+    top: 250vh;
+  }
+
   .split.info.main-contact {
-    height: 100vh;
+    height: 80vh;
     top: 50vh;
   }
 
@@ -465,9 +529,11 @@ textarea {
   }
 }
 
-/*
-
 @media screen and (max-width: 479px) {
+  ol a {
+    font-size: 0.75rem;
+  }
+
   .title {
     font-size: 2.25rem;
   }
@@ -483,9 +549,13 @@ textarea {
     line-height: 1.875rem;
   }
 
+  input, 
+  textarea {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+  } 
+
   .copyright {
     font-size: 1rem;
   }
 }
-
-*/
