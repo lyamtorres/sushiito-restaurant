@@ -6,6 +6,8 @@
   --section-height: 100vh;
 }
 
+/* INDEX PAGE */
+
 body {
   margin: 0;
   padding: 0;
@@ -120,14 +122,14 @@ nav {
   height: var(--section-height);
 }
 
-img {
-  
-}
-
-.showcase .container {
-  background-image: url(../img/hero.jpg);
+.image-container {
+  height: inherit;
   background-size: cover;
   background-position: center;
+}
+
+.showcase .image-container {
+  background-image: url(../img/hero.jpg);
 }
 
 /* Restaurant menu section */ 
@@ -150,7 +152,7 @@ img {
 }
 
 .box {
-  width: 100%;
+  width: var(--section-width);
   height: 2.5rem;
   display: flex;
 }
@@ -178,15 +180,14 @@ img {
   position: absolute;
 }
 
-.split.left.restaurant-menu {
+.split.info {
   background-color: var(--primary-color);
   display: inherit;
   align-items: center;
-  left: 0;
 }
 
 .item {
-  width: 100%;
+  width: var(--section-width);
   margin: 0 auto;
   padding: 0 2rem;
   padding-top: 5rem;
@@ -194,9 +195,16 @@ img {
   flex-wrap: wrap;
 }
 
-.split.right.restaurant-menu {
+.split.info.restaurant-menu {
+  left: 0;
+}
+
+.split.image {
   background-size: cover;
   background-position: center;
+}
+
+.split.image.restaurant-menu {
   background-image: url(../img/menu.jpg);
   right: 0;
 }
@@ -208,18 +216,13 @@ img {
   display: flex;
 }
 
-.split.left.about {
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/about.jpg);
-  left: 0;
+.split.info.about {
+  right: 0;
 }
 
-.split.right.about {
-  background-color: var(--main-bg-color);
-  display: inherit;
-  align-items: center;
-  right: 0;
+.split.image.about {
+  background-image: url(../img/about.jpg);
+  left: 0;
 }
 
 /* Events section */
@@ -229,16 +232,11 @@ img {
   display: flex;
 }
 
-.split.left.events {
-  background-color: var(--main-bg-color);
-  display: inherit;
-  align-items: center;
+.split.info.events {
   left: 0;
 }
 
-.split.right.events {
-  background-size: cover;
-  background-position: center;
+.split.image.events {
   background-image: url(../img/events.jpg);
   right: 0;
 }
@@ -250,18 +248,13 @@ img {
   display: flex;
 }
 
-.split.left.contact {
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/contact.jpg);
-  left: 0;
+.split.info.contact {
+  right: 0;
 }
 
-.split.right.contact {
-  background-color: var(--main-bg-color);
-  display: inherit;
-  align-items: center;
-  right: 0;
+.split.image.contact {
+  background-image: url(../img/contact.jpg);
+  left: 0;
 }
 
 /* Footer */
@@ -282,93 +275,69 @@ img {
   color: var(--terciary-color);
 }
 
-/* MENU PAGE adjustments*/
+/* RESTAURANT MENU PAGE */
 
 .main-menu {
   height: var(--section-height);
   display: flex;
 }
 
-.split.left.main-menu {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
+.split.info.main-menu {
   left: 0;
 }
 
-.split.right.main-menu {
-  background-size: cover;
-  background-position: center;
+.split.image.main-menu {
   background-image: url(../img/main-menu.jpg);
   right: 0;
 }
 
-/* ABOUT PAGE adjustments */ 
+/* ABOUT PAGE */ 
 
 .main-about {
   height: var(--section-height);
   display: flex;
 }
 
-.split.left.main-about {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
+.split.info.main-about {
   left: 0;
 }
 
-.split.right.main-about {
-  background-size: cover;
-  background-position: center;
+.split.image.main-about {
   background-image: url(../img/main-about.jpg);
   right: 0;
 }
 
-/* EVENTS PAGE adjustments */
+/* EVENTS PAGE */
 
 .main-events {
   height: var(--section-height);
   display: flex;
 }
 
-.split.left.main-events {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
+.split.info.main-events {
   left: 0;
 }
 
-.split.right.main-events {
-  background-size: cover;
-  background-position: center;
+.split.image.main-events {
   background-image: url(../img/main-events.jpg);
   right: 0;
 }
 
-/* CONTACT PAGE adjustments */
+/* CONTACT PAGE */
 
 .main-contact {
   height: var(--section-height);
   display: flex;
 }
 
-.split.left.main-contact {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
+.split.info.main-contact {
   left: 0;
 }
 
-.split.right.main-contact {
-  background-size: cover;
-  background-position: center;
+.split.image.main-contact {
   background-image: url(../img/main-contact.jpg);
   right: 0;
 }
-
-
-
-
 
 .contact-form {
   width: inherit;
@@ -387,55 +356,33 @@ textarea {
   padding-left: 0.5rem;
   font-size: 1.25rem;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  line-height: 2rem;
-  border: solid var(--secondary-color);
   color: var(--secondary-color);
   background-color: var(--primary-color);
+  border: solid var(--secondary-color);
+  line-height: 2rem;
 } 
 
-/*
-
-input {
-  font-size: 1.25rem;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  line-height: 2rem;
-  border: solid var(--secondary-color);
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-}
-
-.contact-form .msg textarea {
-  height: 6rem;
-}
-
-*/
-
-/* RESERVATION PAGE adjustments */
+/* RESERVATION PAGE */
 
 .main-reservation {
   height: var(--section-height);
   display: flex;
 }
 
-.split.left.main-reservation {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
+.split.info.main-reservation {
   left: 0;
 }
 
-.split.right.main-reservation {
-  background-size: cover;
-  background-position: center;
+.split.image.main-reservation {
   background-image: url(../img/main-reservation.jpg);
   right: 0;
 }
 
-/* Media queries */
+/* RESPONSIVE ADJUSTMENTS */
 
 @media screen and (max-width: 767px) {
 
-  /* Header */
+  /* Makes the reservation button disappear from the header in mobile mode */
 
   .navbar-segment {
     width: 50%;
@@ -453,83 +400,67 @@ input {
     display: none;
   }
 
-  /* Restaurant menu section */
+  /* Adjusts positions in mobile mode putting the image in the top, and then the information */
 
   .item {
     padding-top: 0;
   }
 
   .split {
-    width: 100%;
+    width: var(--section-width);
     height: 50vh;
   }
 
-  .split.left.restaurant-menu {
-    top: 150vh; 
-  }
-
-  .split.right.restaurant-menu {
+  .split.image.restaurant-menu {
     top: 100vh; 
   }
 
-  /* About section */
+  .split.info.restaurant-menu {
+    top: 150vh; 
+  }
 
-  .split.left.about {
+  .split.image.about {
     top: 200vh;
   }
 
-  .split.right.about {
+  .split.info.about {
     top: 250vh;
   }
 
-  /* Events section */
-
-  .split.left.events {
-    top: 350vh; 
-  }
-
-  .split.right.events {
+  .split.image.events {
     top: 300vh; 
   }
 
-  /* Contact section */
+  .split.info.events {
+    top: 350vh; 
+  }
 
-  .split.left.contact {
+  .split.image.contact {
     top: 400vh; 
   }
 
-  .split.right.contact {
+  .split.info.contact {
     top: 450vh; 
   }
 
-  /* MENU PAGE adjustments*/
-
-  .split.left.main-menu {
+  .split.info.main-menu {
     top: 50vh;
   }
 
-  /* ABOUT PAGE adjustments */
-
-  .split.left.main-about {
+  .split.info.main-about {
     top: 50vh;
   }
 
-  /* EVENTS PAGE adjustments */
-
-  .split.left.main-events {
+  .split.info.main-events {
     top: 50vh;
   }
 
-  /* CONTACT PAGE adjustments */
-
-  .split.left.main-contact {
+  .split.info.main-contact {
     height: 100vh;
     top: 50vh;
   }
 
-  /* RESERVATION PAGE adjustments */
-
-  .split.left.main-reservation {
+  .split.info.main-reservation {
     top: 50vh;
   }
 }
