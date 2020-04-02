@@ -54,3 +54,4 @@ const poolLinkTwo = document.querySelector('.pool-link-two');
 poolLinkTwo.addEventListener('click', () => {
     smoothScroll('.pool', 1000);
 });
+
