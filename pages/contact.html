@@ -36,7 +36,7 @@
                 <div class="navbar-segment" id="logo-segment">
                     <a href="https://lyamtorres.github.io/sushiito-restaurant/">
                         <div class="logo">
-                            <img src="../img/logo.png" alt="">
+                            <img src="../img/logo.png" alt="Logo of Sushiito Restaurant">
                         </div>
                     </a>
                 </div>
@@ -56,19 +56,19 @@
                         Ex dicta reiciendis provident distinctio iure, illo necessitatibus quam cumque sint dolore,
                         maxime voluptatibus vitae nulla.
                     </p>
-                    <div class="contact-form">
-                        <div class="input-fields">
-                            <input type="text" class="input" placeholder="Name">
-                            <input type="text" class="input" placeholder="Email">
-                            <input type="text" class="input" placeholder="Mobile">
+
+                    <!----- FORM RELATED CODE ----->
+                    <form id="contact-form" method="post" action="" onsubmit="return validateForm();">
+                        <input type="text" id="user-name" placeholder="Name" required="required" />
+                        <input type="email" id="user-email" placeholder="Email" required="required" />
+                        <input type="tel" id="user-mobile" placeholder="Mobile" required="required" pattern="[0-9]{10}" />
+                        <textarea id="user-message" placeholder="Message" maxlength="300"></textarea>
+                        <div class="box">
+                            <button type="submit" id="user-submit">Submit</button>
                         </div>
-                        <div class="message">
-                            <textarea placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <a class="more-info" href="#">Submit</a>
-                    </div>
+                    </form>
+                    <!----- ENDS HERE ----->
+                    
                 </div>
             </div>
             <div class="split image main-contact">
@@ -77,7 +77,7 @@
     </section>
     <footer class="footer">
         <div class="container">
-            <h3 class="copyright">Sushiito Restaurant 2020. All Rights Reserved</h3>
+            <p class="copyright">Sushiito Restaurant 2020. All Rights Reserved</p>
         </div>
     </footer>
     <script src="../js/script.js"></script>

@@ -6,24 +6,37 @@
   --section-height: 100vh;
 }
 
-/* INDEX PAGE */
+          /*
+
+            || General Styles 
+            
+          */
+
+* {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
   line-height: 2rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   margin: 0;
   margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+nav {
+  width: inherit;
+  height: inherit;
+  display: inherit;
+}
+
+a {
+  text-decoration: none;
   text-transform: capitalize;
 }
 
@@ -48,21 +61,21 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  text-transform: capitalize;
+button {
+  width: 8.5rem;
+  height: 2.5rem;
+  border: solid var(--secondary-color);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  transition: .25s ease-in-out;
+  cursor: pointer;
 }
 
-
-/* Header */
-
-.header {
-  width: var(--section-width);
-  height: 5rem;
+button:hover {
+  color: var(--terciary-color);
   background-color: var(--secondary-color);
-  display: flex;
-  position: fixed;
-  z-index: 1;
 }
 
 .container {
@@ -73,14 +86,61 @@ a {
   display: flex;
 }
 
-.header .container {
+.box {
+  width: var(--section-width);
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.split {
+  width: 50%;
+  height: inherit;
+  position: absolute;
+}
+
+.split.info {
+  background-color: var(--primary-color);
+  display: inherit;
+  align-items: center;
+}
+
+.split.image {
+  background-size: cover;
+  background-position: center;
+}
+
+.item {
+  width: var(--section-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  padding-top: 4rem;
+  display: inherit;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: inherit;
   height: inherit;
 }
 
-nav {
-  width: inherit;
+          /*
+
+            || Header and Navigation Styles 
+            
+          */
+
+.header {
+  width: var(--section-width);
+  height: 5rem;
+  background-color: var(--secondary-color);
+  display: flex;
+  position: fixed;
+  z-index: 1;
+}
+
+.header .container {
   height: inherit;
-  display: inherit;
 }
 
 .navbar-segment {
@@ -93,22 +153,9 @@ nav {
   display: none;
 }
 
-#logo-segment {
-  justify-content: center;
-}
-
 .logo {
   width: 9rem;
   height: 3rem;
-}
-
-.logo img {
-  width: inherit;
-  height: inherit;
-}
-
-#reservation-segment {
-  justify-content: flex-end;
 }
 
 .reservation {
@@ -117,7 +164,7 @@ nav {
   border: solid var(--terciary-color);
   color: var(--terciary-color);
   font-size: 1.5rem;
-  line-height: 3rem;
+  line-height: 3.25rem;
   text-align: center;
   text-transform: uppercase;
   transition: .25s ease-in-out;
@@ -128,7 +175,19 @@ nav {
   background-color: var(--terciary-color);
 }
 
-/* Showcase section */
+#logo-segment {
+  justify-content: center;
+}
+
+#reservation-segment {
+  justify-content: flex-end;
+}
+
+          /*
+
+            || Showcase Styles 
+            
+          */
 
 .showcase {
   height: var(--section-height);
@@ -144,7 +203,11 @@ nav {
   background-image: url(../img/hero.jpg);
 }
 
-/* Restaurant menu section */ 
+          /*
+
+            || Restaurant Menu Styles
+            
+          */
 
 .restaurant-menu {
   height: var(--section-height);
@@ -164,58 +227,8 @@ nav {
   font-size: 1.25rem;
 }
 
-.box {
-  width: var(--section-width);
-  height: 2.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-}
-
-.more-info {
-  width: 7.5rem;
-  height: inherit;
-  border: solid var(--secondary-color);
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: .25s ease-in-out;
-}
-
-.more-info:hover {
-  color: var(--terciary-color);
-  background-color: var(--secondary-color);
-}
-
-.split {
-  width: 50%;
-  height: inherit;
-  position: absolute;
-}
-
-.split.info {
-  background-color: var(--primary-color);
-  display: inherit;
-  align-items: center;
-}
-
-.item {
-  width: var(--section-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  padding-top: 4rem;
-  display: inherit;
-  flex-wrap: wrap;
-}
-
 .split.info.restaurant-menu {
   left: 0;
-}
-
-.split.image {
-  background-size: cover;
-  background-position: center;
 }
 
 .split.image.restaurant-menu {
@@ -223,7 +236,11 @@ nav {
   right: 0;
 }
 
-/* About section */
+          /*
+
+            || About Styles
+            
+          */
 
 .about {
   height: var(--section-height);
@@ -239,7 +256,15 @@ nav {
   left: 0;
 }
 
-/* Events section */
+.meet-the-team {
+  margin-left: 1rem;
+}
+
+          /*
+
+            || Events Styles
+            
+          */
 
 .events {
   height: var(--section-height);
@@ -255,7 +280,11 @@ nav {
   right: 0;
 }
 
-/* Contact section */ 
+          /*
+
+            || Contact Styles
+            
+          */
 
 .contact {
   height: var(--section-height);
@@ -271,7 +300,11 @@ nav {
   left: 0;
 }
 
-/* Footer */
+          /*
+
+            || Footer Styles
+            
+          */
 
 .footer {
   height: 4rem;
@@ -290,7 +323,11 @@ nav {
   color: var(--terciary-color);
 }
 
-/* RESTAURANT MENU PAGE */
+          /*
+
+            || Restaurant Menu Page Styles
+            
+          */
 
 .main-menu {
   height: var(--section-height);
@@ -306,11 +343,11 @@ nav {
   right: 0;
 }
 
-/* ABOUT PAGE */ 
+          /*
 
-.more-info {
-  margin-right: 1rem;
-}
+            || About Page Styles
+            
+          */
 
 .main-about {
   height: var(--section-height);
@@ -326,7 +363,11 @@ nav {
   right: 0;
 }
 
-/* EVENTS PAGE */
+          /*
+
+            || Events Page Styles
+            
+          */
 
 .main-events {
   height: var(--section-height);
@@ -370,8 +411,11 @@ nav {
   right: 0;
 }
 
+          /*
 
-/* CONTACT PAGE */
+            || Contact Page Styles
+            
+          */
 
 .main-contact {
   height: var(--section-height);
@@ -387,30 +431,32 @@ nav {
   right: 0;
 }
 
-.contact-form {
+#contact-form {
   width: inherit;
-}
-
-.input-fields,
-.message {
-  display: flex;
+  height: inherit;
+  display: inherit;
   flex-wrap: wrap;
 }
 
-input, 
-textarea {
+#user-name,
+#user-email,
+#user-mobile,
+#user-message {
   width: 100%;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   font-size: 1.25rem;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
   color: var(--secondary-color);
   background-color: var(--primary-color);
   border: solid var(--secondary-color);
   line-height: 2rem;
-} 
+}
 
-/* RESERVATION PAGE */
+          /*
+
+            || Reservation Page Styles
+            
+          */
 
 .main-reservation {
   height: var(--section-height);
@@ -426,7 +472,11 @@ textarea {
   right: 0;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
+          /*
+
+            || Responsive Design
+            
+          */
 
 @media screen and (max-width: 767px) {
 
@@ -438,14 +488,6 @@ textarea {
 
   .header .menu .menu-reservation {
     display: flex;
-  }
-
-  #logo-segment {
-    justify-content: flex-end;
-  }
-
-  #reservation-segment {
-    display: none;
   }
 
   /* Adjusts positions in mobile mode putting the image in the top, and then the information */
@@ -527,6 +569,14 @@ textarea {
   .split.info.main-reservation {
     top: 50vh;
   }
+
+  #logo-segment {
+    justify-content: flex-end;
+  }
+
+  #reservation-segment {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -541,21 +591,23 @@ textarea {
   .description {
     font-size: 0.9375rem;
   }
-      
-  .more-info {
-    width: 5.625rem;
-    height: 1.875rem;
-    font-size: 1.125rem;
-    line-height: 1.875rem;
+
+  .copyright {
+    font-size: 1rem;
   }
 
-  input, 
-  textarea {
+  #user-name,
+  #user-email,
+  #user-mobile,
+  #user-message {
     font-size: 0.9375rem;
     line-height: 1.5rem;
   } 
 
-  .copyright {
-    font-size: 1rem;
+  #user-submit {
+    width: 5.625rem;
+    height: 1.875rem;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
   }
 }

@@ -1,5 +1,8 @@
-/* Activates smooth scroll for navigation in the Events section */
+function checkUserName() {
+    
+}
 
+// Activates smooth scroll for navigation in the Events section
 var smoothScroll = (target, duration) => {
     var target = document.querySelector(target);
     var targetPosition = target.getBoundingClientRect().top;
@@ -54,4 +57,6 @@ const poolLinkTwo = document.querySelector('.pool-link-two');
 poolLinkTwo.addEventListener('click', () => {
     smoothScroll('.pool', 1000);
 });
+
+
 
