@@ -51,8 +51,8 @@ ol {
 ol a {
   padding-right: 1rem;
   font-size: 1rem;
-  text-decoration: underline;
   color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 ul {
@@ -64,11 +64,11 @@ ul {
 button {
   width: 8.5rem;
   height: 2.5rem;
-  border: solid var(--secondary-color);
-  color: var(--secondary-color);
-  font-size: 1.5rem;
   line-height: 2.25rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  color: var(--secondary-color);
+  border: solid var(--secondary-color);
   transition: .25s ease-in-out;
   cursor: pointer;
 }
@@ -77,6 +77,12 @@ button:hover {
   color: var(--terciary-color);
   background-color: var(--secondary-color);
 }
+
+          /*
+
+            || Utilities Styles 
+            
+          */
 
 .container {
   margin: 0 auto;
@@ -87,9 +93,9 @@ button:hover {
 }
 
 .box {
+  margin-bottom: 1rem;
   width: var(--section-width);
   height: 2.5rem;
-  margin-bottom: 1rem;
   display: flex;
 }
 
@@ -111,18 +117,14 @@ button:hover {
 }
 
 .item {
-  width: var(--section-width);
   margin: 0 auto;
   padding: 0 2rem;
   padding-top: 4rem;
+  width: var(--section-width);
   display: inherit;
   flex-wrap: wrap;
 }
 
-.logo img {
-  width: inherit;
-  height: inherit;
-}
 
           /*
 
@@ -134,13 +136,17 @@ button:hover {
   width: var(--section-width);
   height: 5rem;
   background-color: var(--secondary-color);
-  display: flex;
   position: fixed;
   z-index: 1;
+  display: flex;
 }
 
 .header .container {
   height: inherit;
+}
+
+.header .menu .menu-reservation {
+  display: none;
 }
 
 .navbar-segment {
@@ -149,28 +155,21 @@ button:hover {
   align-items: center;
 }
 
-.header .menu .menu-reservation {
-  display: none;
-}
-
 .logo {
   width: 9rem;
   height: 3rem;
 }
 
-.reservation {
+#reservation {
   width: 12rem;
   height: 3rem;
-  border: solid var(--terciary-color);
+  line-height: 2.75rem;
   color: var(--terciary-color);
-  font-size: 1.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: .25s ease-in-out;
+  background-color: var(--secondary-color);
+  border: solid var(--terciary-color);
 }
 
-.reservation:hover {
+#reservation:hover {
   color: var(--secondary-color);
   background-color: var(--terciary-color);
 }
@@ -181,6 +180,11 @@ button:hover {
 
 #reservation-segment {
   justify-content: flex-end;
+}
+
+.logo img {
+  width: inherit;
+  height: inherit;
 }
 
           /*
@@ -215,8 +219,8 @@ button:hover {
 }
 
 .title {
-  width: inherit;
   margin-top: 1rem;
+  width: inherit;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -256,7 +260,7 @@ button:hover {
   left: 0;
 }
 
-.meet-the-team {
+#meet-team-button {
   margin-left: 1rem;
 }
 
@@ -442,14 +446,14 @@ button:hover {
 #user-email,
 #user-mobile,
 #user-message {
-  width: 100%;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
+  width: 100%;
+  line-height: 2rem;
   font-size: 1.25rem;
   color: var(--secondary-color);
   background-color: var(--primary-color);
   border: solid var(--secondary-color);
-  line-height: 2rem;
 }
 
           /*
@@ -604,7 +608,7 @@ button:hover {
     line-height: 1.5rem;
   } 
 
-  #user-submit {
+  #submit-button {
     width: 5.625rem;
     height: 1.875rem;
     font-size: 1.125rem;
