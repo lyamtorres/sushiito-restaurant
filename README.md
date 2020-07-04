@@ -3,5 +3,5 @@ Sushiito Restaurant is a responsive static website developed specifically for le
 
 * Live project: https://lyamtorres.github.io/sushiito-restaurant/
 
-![lyam torres](https://repository-images.githubusercontent.com/246410529/a0527200-be45-11ea-951f-5cdf5f509efa)
+![lyam torres](https://repository-images.githubusercontent.com/246410529/bb71b180-be46-11ea-8882-d2b2019354e4)
 
